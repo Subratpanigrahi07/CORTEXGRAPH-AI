@@ -65,10 +65,9 @@ A **LangGraph-orchestrated multi-agent pipeline** extracts, verifies, and dedupl
   </tr>
   <tr>
     <td><img width="450" src="https://github.com/user-attachments/assets/5354be9c-afc6-4cdf-98bf-b04ec5c25a35" /></td>
-    <td></td>
+    <td><img width="450" src="https://github.com/user-attachments/assets/9f49746b-104e-4c46-972b-8b6978382b94" /></td>
   </tr>
 </table>
-
 
 ## ✨ Key Features
 
