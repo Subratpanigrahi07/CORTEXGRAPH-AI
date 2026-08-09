@@ -51,7 +51,8 @@ A **LangGraph-orchestrated multi-agent pipeline** extracts, verifies, and dedupl
 5. **analytics.png** — Graph analytics dashboard (PageRank rankings, community detection, centrality metrics)
 
 | Upload & Ingestion | Interactive Graph | Entity Extraction |
-![Uploading Screenshot 2026-08-09 161330.png…]() 
+<img width="1918" height="1077" alt="Screenshot 2026-08-09 161330" src="https://github.com/user-attachments/assets/8494cb5b-b6b0-421f-bc09-06b1a8ffa3fd" />
+
 
 
 ## ✨ Key Features
