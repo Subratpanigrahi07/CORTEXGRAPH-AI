@@ -44,17 +44,15 @@ A **LangGraph-orchestrated multi-agent pipeline** extracts, verifies, and dedupl
 ---
 📸 Screenshots
 
-Here's what CortexGraph looks like in action. Add these 5 key screenshots to your docs/screenshots/ folder:
+1. **upload.png** — Document upload & async ingestion interface
+2. **graph.png** — Interactive Neo4j force-directed graph visualization
+3. **extraction.png** — Entity & relationship extraction details with confidence scores
+4. **qa.png** — GraphRAG Q&A response showing sources, entities involved, and graph path
+5. **analytics.png** — Graph analytics dashboard (PageRank rankings, community detection, centrality metrics)
 
-upload.png — Document upload & async ingestion interface
-graph.png — Interactive Neo4j force-directed graph visualization
-extraction.png — Entity & relationship extraction details with confidence scores
-qa.png — GraphRAG Q&A response showing sources, entities involved, and graph path
-analytics.png — Graph analytics dashboard (PageRank rankings, community detection, centrality metrics)
-Upload & Ingestion	Interactive Graph	Entity Extraction
-Show Image	Show Image	Show Image
-GraphRAG Q&A	Graph Analytics
-Show Image	Show Image
+| Upload & Ingestion | Interactive Graph | Entity Extraction |
+![Uploading Screenshot 2026-08-09 161330.png…]() 
+
 
 ## ✨ Key Features
 
