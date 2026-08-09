@@ -1,0 +1,355 @@
+/* Fonts loaded via <link> in index.html */
+@import "tailwindcss";
+
+/* ─── Bit Cloud Design Tokens ────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-base: #0d0e12;
+  --bg-surface: #14151a;
+  --bg-elevated: #1c1d24;
+  --bg-overlay: #22232d;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-default: rgba(255, 255, 255, 0.11);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  /* Accent – Purple/Indigo (Bit primary) */
+  --accent-purple: #6c5ce7;
+  --accent-purple-dim: rgba(108, 92, 231, 0.15);
+  --accent-purple-glow: rgba(108, 92, 231, 0.35);
+
+  /* Accent – Cyan/Electric Blue */
+  --accent-cyan: #22d3ee;
+  --accent-cyan-dim: rgba(34, 211, 238, 0.12);
+  --accent-cyan-glow: rgba(34, 211, 238, 0.3);
+
+  /* Accent – Emerald (status) */
+  --accent-emerald: #10b981;
+
+  /* Text */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-dim: #475569;
+
+  /* Sidebar */
+  --sidebar-width: 240px;
+  --sidebar-collapsed: 52px;
+  --topnav-height: 48px;
+
+  /* Inspector */
+  --inspector-width: 340px;
+}
+
+/* Light mode overrides */
+[data-theme="light"] {
+  --bg-base: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f1f5f9;
+  --bg-overlay: #e2e8f0;
+  --border-subtle: rgba(15, 23, 42, 0.07);
+  --border-default: rgba(15, 23, 42, 0.11);
+  --border-strong: rgba(15, 23, 42, 0.18);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+  --accent-purple-dim: rgba(108, 92, 231, 0.08);
+  --accent-cyan-dim: rgba(6, 182, 212, 0.08);
+}
+
+/* ─── Base Reset ──────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+/* ─── Global Smooth Theme Transition ──────────────── */
+body, header, aside, main, button, input, textarea, .google-ai-inner-pill, .glass-surface, .bit-card, .google-ai-search-wrapper, .google-ai-inner-pill * {
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Document View Transition Overrides ──────────── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  overflow: hidden;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+/* ─── Canvas Grid Patterns ────────────────────────── */
+.dot-grid-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.dot-grid-light {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.09) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Legacy compat */
+.radial-grid-dark { background-image: radial-gradient(rgba(255,255,255,0.06) 1.2px, transparent 1.2px); background-size: 24px 24px; }
+.radial-grid-light { background-image: radial-gradient(rgba(30, 41, 59, 0.12) 1.2px, transparent 1.2px); background-size: 24px 24px; }
+
+/* ─── Custom Scrollbar ────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(108, 92, 231, 0.5); }
+
+/* ─── Glassmorphism Utility ──────────────────────── */
+.glass-surface {
+  background: rgba(28, 29, 36, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+}
+
+[data-theme="light"] .glass-surface {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-default);
+}
+
+/* ─── Bit-Style Card ─────────────────────────────── */
+.bit-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+}
+
+/* ─── Status Dot Animations ──────────────────────── */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.status-online {
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+/* ─── Command Palette Backdrop ───────────────────── */
+.cmd-backdrop {
+  background: rgba(13, 14, 18, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+[data-theme="light"] .cmd-backdrop {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+/* ─── Sidebar Nav Item ───────────────────────────── */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-item:hover {
+  background: var(--bg-overlay);
+  color: var(--text-primary);
+}
+
+.nav-item.active {
+  background: var(--accent-purple-dim);
+  color: var(--text-primary);
+  border-left: 2px solid var(--accent-purple);
+  padding-left: 8px;
+}
+
+/* ─── Inspector Tab ──────────────────────────────── */
+.inspector-tab[data-state="active"] {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-purple);
+}
+
+.inspector-tab[data-state="inactive"] {
+  color: var(--text-muted);
+}
+
+/* ─── Code Block ─────────────────────────────────── */
+.code-block {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px;
+  line-height: 1.7;
+  background: var(--bg-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  color: var(--accent-cyan);
+}
+
+/* ─── Micro Animations ───────────────────────────── */
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-in-right { animation: slide-in-right 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+.animate-slide-in-left { animation: slide-in-left 0.22s cubic-bezier(0.22, 1, 0.36, 1); }
+.animate-fade-up { animation: fade-up 0.2s ease-out; }
+
+/* ─── Node Type Badge Colors ─────────────────────── */
+.badge-person   { background: rgba(56, 189, 248, 0.12); color: #38bdf8; border-color: rgba(56, 189, 248, 0.25); }
+.badge-tech     { background: rgba(192, 132, 252, 0.12); color: #c084fc; border-color: rgba(192, 132, 252, 0.25); }
+.badge-database { background: rgba(52, 211, 153, 0.12); color: #34d399; border-color: rgba(52, 211, 153, 0.25); }
+.badge-project  { background: rgba(244, 114, 182, 0.12); color: #f472b6; border-color: rgba(244, 114, 182, 0.25); }
+.badge-company  { background: rgba(251, 191, 36, 0.12); color: #fbbf24; border-color: rgba(251, 191, 36, 0.25); }
+.badge-default  { background: rgba(148, 163, 184, 0.1); color: #94a3b8; border-color: rgba(148, 163, 184, 0.2); }
+
+/* ─── Google AI Mode Search Bar ───────────────────── */
+@keyframes google-ai-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes google-ai-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes google-ai-sparkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(12deg);
+  }
+}
+
+.google-ai-search-wrapper {
+  position: relative;
+  border-radius: 9999px;
+  background: transparent;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.google-ai-border-glow {
+  position: absolute;
+  inset: -2.5px;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    #4285f4 0%,
+    #ea4335 25%,
+    #fbbc05 50%,
+    #34a853 75%,
+    #4285f4 100%
+  );
+  background-size: 300% 300%;
+  animation: google-ai-shimmer 2.5s linear infinite;
+
+  -webkit-mask-image: radial-gradient(
+    160px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.95) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: radial-gradient(
+    160px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.95) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  opacity: calc(var(--proximity, 0));
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 0;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Disabled ambient blur shadow to ensure crisp appearance with no unwanted shadow effect */
+.google-ai-ambient-glow {
+  display: none !important;
+}
+
+.google-ai-inner-pill {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-theme="light"] .google-ai-inner-pill {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+.google-ai-search-wrapper:hover .google-ai-inner-pill,
+.google-ai-search-wrapper:focus-within .google-ai-inner-pill {
+  border-color: transparent !important;
+}
+
+.google-ai-sparkle-icon {
+  animation: google-ai-sparkle 3s ease-in-out infinite;
+}
+
+@keyframes soundwave-bar {
+  0%, 100% {
+    transform: scaleY(0.28);
+  }
+  50% {
+    transform: scaleY(1.0);
+  }
+}
+
