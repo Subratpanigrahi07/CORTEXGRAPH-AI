@@ -52,12 +52,20 @@ A **LangGraph-orchestrated multi-agent pipeline** extracts, verifies, and dedupl
 
 <table>
   <tr>
-    <td>
-      <img width="450" src="https://github.com/user-attachments/assets/574d27b7-ec35-498d-8728-9aed794f8bf3" />
-    </td>
-    <td>
-      <img width="450" src="https://github.com/user-attachments/assets/e797668a-f71f-4e73-8ad9-69c1fd834e12" />
-    </td>
+    <td><img width="450" src="https://github.com/user-attachments/assets/574d27b7-ec35-498d-8728-9aed794f8bf3" /></td>
+    <td><img width="450" src="https://github.com/user-attachments/assets/e797668a-f71f-4e73-8ad9-69c1fd834e12" /></td>
+  </tr>
+  <tr>
+    <td><img width="450" src="https://github.com/user-attachments/assets/7424c1f3-d81c-4938-8710-bfa923831701" /></td>
+    <td><img width="450" src="https://github.com/user-attachments/assets/9240bee5-7a8d-402a-9192-a1918ebcf437" /></td>
+  </tr>
+  <tr>
+    <td><img width="450" src="https://github.com/user-attachments/assets/90623634-b164-4f4c-b5b7-cf54e2945488" /></td>
+    <td><img width="450" src="https://github.com/user-attachments/assets/1fdee958-f00c-4ea8-ad16-a3f80a044207" /></td>
+  </tr>
+  <tr>
+    <td><img width="450" src="https://github.com/user-attachments/assets/5354be9c-afc6-4cdf-98bf-b04ec5c25a35" /></td>
+    <td></td>
   </tr>
 </table>
 
