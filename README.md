@@ -50,8 +50,7 @@ A **LangGraph-orchestrated multi-agent pipeline** extracts, verifies, and dedupl
 4. **qa.png** — GraphRAG Q&A response showing sources, entities involved, and graph path
 5. **analytics.png** — Graph analytics dashboard (PageRank rankings, community detection, centrality metrics)
 
-| Upload & Ingestion | Interactive Graph | Entity Extraction |
-<img width="500" alt="CortexGraph Screenshot" src="https://github.com/user-attachments/assets/8494cb5b-b6b0-421f-bc09-06b1a8ffa3fd" />
+<img width="1918" height="1073" alt="Screenshot 2026-08-09 170112" src="https://github.com/user-attachments/assets/dc7b40d8-22c6-4fc5-a41d-12cf24b6cb5a" />
 
 
 ## ✨ Key Features
