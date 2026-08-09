@@ -287,15 +287,12 @@ git commit -m "Add: your feature"
 git push origin feature/your-feature
 ```
 
-## 📄 License
-
-Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
 
 ## 👤 Author
 
 **Subrat Panigrahi**
 B.Tech CSE (AI/ML), GIET University
-[GitHub](https://github.com/Subratpanigrahi07) · [LinkedIn](#)
+[GitHub](https://github.com/Subratpanigrahi07) · [LinkedIn](https://www.linkedin.com/in/subrat-panigrahi-1b9333325?utm_source=share_via&utm_content=profile&utm_medium=member_android)
 
 ---
 
