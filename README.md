@@ -50,7 +50,16 @@ A **LangGraph-orchestrated multi-agent pipeline** extracts, verifies, and dedupl
 4. **qa.png** — GraphRAG Q&A response showing sources, entities involved, and graph path
 5. **analytics.png** — Graph analytics dashboard (PageRank rankings, community detection, centrality metrics)
 
-<img width="500" alt="Screenshot 2026-08-09 161330" src="https://github.com/user-attachments/assets/574d27b7-ec35-498d-8728-9aed794f8bf3" />   <<img width="500" alt="Screenshot 2026-08-09 164444" src="https://github.com/user-attachments/assets/e797668a-f71f-4e73-8ad9-69c1fd834e12" />
+<table>
+  <tr>
+    <td>
+      <img width="450" src="https://github.com/user-attachments/assets/574d27b7-ec35-498d-8728-9aed794f8bf3" />
+    </td>
+    <td>
+      <img width="450" src="https://github.com/user-attachments/assets/e797668a-f71f-4e73-8ad9-69c1fd834e12" />
+    </td>
+  </tr>
+</table>
 
 
 ## ✨ Key Features
