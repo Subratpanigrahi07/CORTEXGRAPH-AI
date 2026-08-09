@@ -43,16 +43,6 @@ A **LangGraph-orchestrated multi-agent pipeline** extracts, verifies, and dedupl
 
 ---
 
-## 🎥 Demo
-
-> _Add screenshots or a short GIF here — the Graph Studio visualization and a live Q&A with the graph-path explanation are the two highest-impact things to show._
-
-| Document Ingestion | Interactive Graph Studio | GraphRAG Q&A with Explainability |
-|:---:|:---:|:---:|
-| ![upload](docs/screenshots/upload.png) | ![graph](docs/screenshots/graph.png) | ![qa](docs/screenshots/qa.png) |
-
----
-
 ## ✨ Key Features
 
 | | |
