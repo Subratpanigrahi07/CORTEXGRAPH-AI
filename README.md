@@ -20,8 +20,7 @@
 ![Status](https://img.shields.io/badge/status-active_development-orange?style=flat-square)
 
 <br>
-
-[**Live Demo**](#) &nbsp;•&nbsp; [**API Docs**](#-api-reference) &nbsp;•&nbsp; [**Architecture**](#%EF%B8%8F-architecture) &nbsp;•&nbsp; [**Quick Start**](#-quick-start-docker-compose) &nbsp;•&nbsp; [**Roadmap**](#%EF%B8%8F-roadmap)
+[**API Docs**](#-api-reference) &nbsp;•&nbsp; [**Architecture**](#%EF%B8%8F-architecture) &nbsp;•&nbsp; [**Quick Start**](#-quick-start-docker-compose) &nbsp;•&nbsp; [**Roadmap**](#%EF%B8%8F-roadmap)
 
 </div>
 
